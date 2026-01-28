@@ -2,23 +2,23 @@ name: Embedded Testing CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
-    - name: 1 Checkout code
+    - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: 2 Setup Python
+    - name: Setup Python
       uses: actions/setup-python@v5
       with:
-        python-version: "3.10"
+        python-version: '3.10'
 
-    - name: 3 Install pytest
+    - name: Install pytest
       run: pip install pytest
 
-    - name: 4 Run embedded test
+    - name: Run tests
+      run: pytest -v
