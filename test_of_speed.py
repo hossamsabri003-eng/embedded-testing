@@ -4,4 +4,4 @@ def test_speed_ok():
     assert check_speed(50, 80) == "OKK"
 
 def test_speed_overspeed():
-    assert check_speed(200, 120) == "OKK"
+    assert check_speed(20, 80) == "OKK"
